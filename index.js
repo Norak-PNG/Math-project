@@ -1,3 +1,19 @@
+const navMenu = document.getElementById('navMenu');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const menuIcon = document.getElementById('menuIcon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-menu-open');
+            
+            // Toggle between bars and xmark icons
+            if (navMenu.classList.contains('mobile-menu-open')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
 function caesarCipher(text, shift) {
   return text.split('').map(char => {
     if (char.match(/[a-z]/i)) {
