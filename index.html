@@ -6,288 +6,98 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <header>
-        <div class="header-container">
-            <div class="logo">
-                <i class="ri-shield-keyhole-line"></i>
-                <span>CryptoExplorer</span>
-            </div>
-            <nav id="navMenu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Classical Ciphers</a></li>
-                    <li><a href="#">RSA Encryption</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fa-solid fa-bars" id="menuIcon"></i>
-            </button>
-        </div>
-    </header>
-    <div id="BackgroundImg">
-
-        <div id="" style="
-        background: linear-gradient(to right, #eef2ff, rgba(238, 242, 255, 0.9), transparent);
-        width: 100%;
-        height: 450px;
-        position: absolute;
-        top: 0px;
-        left: 0px;"></div>
-
-        <p style="
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 48px;
-        color: rgb(17, 24, 39);
-        position: absolute;
-        top: 50px;
-        left: 50px;
-        width: 600px;">Explore the World of Cryptography</p>
-
-        <p style="
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 28px;
-        color:  rgb(55, 65, 81);
-        position: absolute;
-        top: 200px;
-        left: 60px;
-        width: 600px;">Discover the fascinating science of encryption from ancient techniques to modern algorithms. Our interactive platform lets you experience firsthand how messages are secured through various cryptographic methods.</p>
-
-    </div>
-
-    <p style="
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 36px;
-    color: rgb(17, 24, 39);
-    position: relative;
-    justify-self: center;
-    top:10px;">Choose Your Encryption Method</p>
-    <p style="
-    justify-self: center;
-    text-align: center;
-    width: 720px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: rgb(75, 85, 99);">Select from historical cipher techniques that shaped the evolution of secure communication or explore modern RSA encryption that powers today's digital security.</p>
-    
-    <div style="
-    margin-top: 40px;
-    width: 100%;
-    display:flex;
-    justify-content: center;
-    justify-self: center;
-    gap: 40px">
-
-        <div id="Classical_Cryptography">
-            <div style="
-            position: relative;
-            top: 35px;
-            left: 35px;
-            width: 4rem;
-            height: 4rem;
-            background-color: #c7c6f0;
-            border-radius: 9999px;"><i class="ri-quill-pen-line" style="
-            color: #4F46E5;
-            font-size: 30px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate3d(-50%, -50%, 0);"></i></div>
-
-
-            <p style="
-            padding: 20px 30px 10px;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 32px;
-            color: rgb(17, 24, 39);">Classical Cryptography</p>
-            <p style="
-            padding: 0px 30px 0px;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            color: rgb(75, 85, 99);
-            translate: 0 -20px;">Explore historical encryption methods used throughout centuries, from Caesar's cipher to the Enigma machine.</p>
-            <div style="padding: 0px 30px 10px;">
-                <p><i class="ri-check-line" style="color:#4F46E5;"></i>  Caesar Cipher</p>
-                <p><i class="ri-check-line" style="color:#4F46E5;"></i>  Caesar Cipher</p>
-                <p><i class="ri-check-line" style="color:#4F46E5;"></i>  Caesar Cipher</p>
-            </div>
-            
-        </div>
-        <div id="RSA_Cryptography">
-            <div style="
-            position: relative;
-            top: 35px;
-            left: 35px;
-            width: 4rem;
-            height: 4rem;
-            background-color: #dcfce7;
-            border-radius: 9999px;"><i class="ri-lock-line" style="
-            color: green;
-            font-size: 30px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate3d(-50%, -50%, 0);"></i></div>
-
-
-            <p style="
-            padding: 20px 30px 10px;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 32px;
-            color: rgb(17, 24, 39);">RSA Cryptography</p>
-            <p style="
-            padding: 0px 30px 10px;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            color: rgb(75, 85, 99);
-            translate: 0 -20px;">Experience modern asymmetric encryption that secures the internet, using public and private key pairs.</p>
-            <div style="padding: 0px 30px 10px;">
-                <p><i class="ri-check-line" style="color:green;"></i>  Public Key Encryption</p>
-                <p><i class="ri-check-line" style="color:green;"></i>  Public Key Encryption</p>
-                <p><i class="ri-check-line" style="color:green;"></i>  Public Key Encryption</p>
-            </div>
+    <div id="head">
+        <div style="width: 80%; position: relative; left: 30px; top: 50px;">
+            <p style="font-size: 36px; font-weight: 700; line-height: 48px; color: rgb(17, 24, 39);">Classical Cryptography</p>
+            <p style="font-size: 16px; font-weight: 400; line-height: 28px;">Classical cryptography refers to the techniques and methods of encrypting messages that were used before the development of modern computers and digital cryptographic systems. These techniques were primarily based on simple mathematical operations, letter substitutions, and rearrangements.</p>
         </div>
     </div>
 
-    <div style="
-    position: relative;
-    justify-items: center;">
-        <P style="
-        font-size: 30px;
-        font-weight: 700;
-        line-height: 36px;
-        color: rgb(17, 24, 39);">Classical Encryption Tool</P>
-        <p style="
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        color: rgb(75, 85, 99);">Enter your message and select a classical cipher method to see the encryption process in action.</p>
+    <p style="text-align: center; margin: 40px; font-size: 24px; font-weight: 400; line-height: 28px;">Types of Classical Ciphers</p>
+
+    <div class="keepcenter">
+        <div class="card">
+            <div style=" position: relative; top: 20px; left: 35px; width: 4rem; height: 4rem; background-color: #dcfce7; border-radius: 9999px;">
+                <i class="ri-puzzle-line" style="color: green; font-size: 30px; position: absolute; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0);"></i>
+                <p style="font-size: 18px; position: relative; left: 80px; top: 20px; width: 180px; color: black;">Substitution Ciphers</p>
+            </div>
+            <p style="width: 90%; position: relative; left: 5%; top: 20px;">Replace each letter or group of letters with another.</p>
+            <br>
+            <p style="position: relative; left: 5%;">Caesar Cipher:</p>
+            <p style="position: relative; left: 5%;">Monoalphabetic Cipher:</p>
+        </div>
+        <div class="card">
+            <div style=" position: relative; top: 20px; left: 35px; width: 4rem; height: 4rem; background-color: #c7c6f0; border-radius: 9999px;">
+                <i class="ri-shuffle-line" style="color: #4F46E5; font-size: 30px; position: absolute; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0);"></i>
+                <p style="font-size: 18px; position: relative; left: 80px; top: 20px; width: 180px; color: black;">Transposition Ciphers</p>
+            </div>
+            <p style="width: 90%; position: relative; left: 5%; top: 20px;">Rearrange the letters of the plaintext according to a certain system.</p>
+            <br>
+            <p style="position: relative; left: 5%;">Rail Fence Cipher:</p>
+            <p style="position: relative; left: 5%;">Columnar Transposition:</p>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 50px; font-size: 24px; font-weight: 400; line-height: 28px;">Advantages & Disadvantages</p>
+    <div class="keepcenter">
+        <div>
+            <p>Pros</p>
+            <p><i class="ri-arrow-right-s-fill"></i>Simple to implement</p>
+            <p><i class="ri-arrow-right-s-fill"></i>No computer needed</p>
+            <p><i class="ri-arrow-right-s-fill"></i>Useful for learning concepts</p>
+        </div>
+        <div>
+            <p>Cons</p>
+            <p><i class="ri-arrow-right-s-fill"></i>Easily broken with modern techniques</p>
+            <p><i class="ri-arrow-right-s-fill"></i>Not secure for modern communication</p>
+            <p><i class="ri-arrow-right-s-fill"></i>Limited keyspace</p>
+        </div>
     </div>
 
-    <div id="select_Encryption_method">
-        <p style="
-        position: relative;
-        justify-self: center;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 28px;
-        color: rgb(17, 24, 39);
-        top: 10px;">Select Encryption Method</p>
-        <p style="
-        position: relative;
-        justify-self: center;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        color: rgb(55, 65, 81);">Classical Cipher Type:</p>
-        <select style="
-        padding-left: 10px;
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        width: 80%;
-        height: 30px;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 24px;
-        color: rgb(55, 65, 81);
-        border-radius: 10px;
-        height: 40px;
-        background-color: rgb(249, 249, 249);
-        outline-color: #4F46E5;">
-            <option value="text">Caesar Cipher</option>
-            <option value="text">Caesar Cipher</option>
-            <option value="text">Caesar Cipher</option>
-        </select>
-        </div>
+    <div style="width: 100%; height: 1px; background-color: black; margin-top: 30px; margin-bottom: 30px;"></div>
 
-    <div style="
-    display:flex;
-    justify-content: center;
-    justify-self: center;
-    gap: 40px;
-    position: relative;
-    width: 100%;">
-        <div id="input">
-            <p style="
-            position: relative;
-            left: 5%">Input</p>
-            <p style="
-            position: relative;
-            left: 5%">Message:</p>
+    <p style="text-align: center; margin-top: 50px; font-size: 24px; font-weight: 400; line-height: 28px;">Try Classical Cipers</p>
 
-            <textarea id="input_box"></textarea>
+    <div id="selectEncript" class="keepcenter">
+        <button id="Caesar" class="selectEnButton">Caesar Cipher</button>
+        <button id="Monoalphabetic" class="selectEnButton">Monoalphabetic Cipher</button>
+        <button id="Rail" class="selectEnButton">Rail Fence Cipher</button>
+        <button id="Columnar" class="selectEnButton">Columnar Transposition</button>
+    </div>
 
-            <p style="
-            position: relative;
-            left: 5%;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            color: rgb(55, 65, 81);">Cipher key:</p>
-            <input id="chiper_key" type="number" value="3" style="
-            padding-left: 10%;
-            color: rgb(55, 65, 81);
-            border-radius: 10px;
-            border: 1px solid;
-            height: 30px;
-            background-color: rgb(249, 249, 249);
-            position: relative;
-            left: 50%;
-            transform: translate(-50%);">
-            <p style="
-            position: relative;
-            left: 5%;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 24px;
-            color: rgb(55, 65, 81);">For Caesar cipher, enter a number (shift value)</p>
-            <div style="
-            display:flex;
-            gap:20px;
-            position: absolute;
-            bottom: 30px;
-            width: 100%;
-            justify-content: center;">
+    <div class="keepcenter" style="font-size: 24px; font-weight: 400; gap: 10px;">
+        <i id="icon" style="position: relative; top: 24px" class="ri-bank-fill"></i>
+        <p id="123"> Caesar Cipher</p>
+    </div>
+
+    <div style="width: 100%; height: 1px; background-color: black; margin-bottom: 60px;"></div>
+
+    <div class="keepcenter">
+        <div class="inputoutput" style="height: 470px;">
+            <p style="position: relative; left: 5%;">Input</p>
+            <p style="position: relative; left: 5%;">Message:</p>
+
+            <textarea id="input_box" placeholder="Hello"></textarea>
+
+            <p style=" position: relative; left: 5%;">Cipher key:</p>
+            <input id="chiper_key" type="number" value="3">
+            <p id="description" style="position: relative; left: 5%; width: 90%;">For Caesar cipher, enter a number (shift value)</p>
+            <div style="text-align: center;">
                 <button id="Encrypt">Encrypt</button>
                 <button id="decrypt">Decrypt</button>
             </div>
 
         </div>
-        <div id="output">
-            <p style="
-            position: relative;
-            left: 5%">Output</p>
-            <p style="
-            position: relative;
-            left: 5%">Result:</p>
+        <div class="inputoutput" style="height: 470px;">
+            <p style="position: relative; left: 5%;">Output</p>
+            <p style="position: relative; left: 5%;">Result:</p>
 
             <textarea readonly id="output_box"></textarea>
-            <p style="
-            position: relative;
-            left: 5%;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 24px;
-            color: rgb(75, 85, 99);">This encryption method is considered secure for non-sensitive information.</p>
-            <button id="download_btn">
-                  <i class="ri-download-line mr-2"></i>  Download Result
-            </button>
-
-        </div>
-       
+            <p style="position: relative; left: 5%; width: 90%;">This encryption method is considered secure for non-sensitive information.</p>
+        </div>       
     </div>
+    <br>
     <script src="index.js"></script>
 </body>
 </html>
