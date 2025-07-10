@@ -1,293 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CryptoExplorer</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-  <header>
-        <div class="header-container">
-            <div class="logo">
-                <i class="ri-shield-keyhole-line"></i>
-                <span>CryptoExplorer</span>
-            </div>
-            <nav id="navMenu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Classical Ciphers</a></li>
-                    <li><a href="#">RSA Encryption</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fa-solid fa-bars" id="menuIcon"></i>
-            </button>
+  <div class="container" data-aos="fade">
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <i class="ri-shield-keyhole-line"></i>
+          <span>CryptoExplorer</span>
         </div>
+        <nav id="navMenu">
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#classical">Caesar Cipher</a></li>
+            <li><a href="#rsa">RSA Encryption</a></li>
+            <li><a href="#footer">About</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fa-solid fa-bars" id="menuIcon"></i>
+        </button>
+      </div>
     </header>
-    <div id="BackgroundImg">
 
-        <div id="" style="
-        background: linear-gradient(to right, #eef2ff, rgba(238, 242, 255, 0.9), transparent);
-        width: 100%;
-        height: 450px;
-        position: absolute;
-        top: 0px;
-        left: 0px;"></div>
+    <section id="hero">
+      <div class="hero-content">
+        <h1>Explore the World of Cryptography</h1>
+        <p class="sub-heading">
+          Discover the fascinating science of encryption from ancient techniques to modern algorithms. Our interactive platform lets you experience firsthand how messages are secured through various cryptographic methods.
+        </p>
+        <a href="#classical" class="hero-cta">Get Started</a>
+      </div>
+      <div class="hero-particles" id="heroParticles"></div>
+      <a href="#classical" class="scroll-indicator">
+        <i class="ri-arrow-down-line"></i>
+      </a>
+    </section>
 
-        <p style="
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 48px;
-        color: rgb(17, 24, 39);
-        position: absolute;
-        top: 50px;
-        left: 50px;
-        width: 600px;">Explore the World of Cryptography</p>
-
-        <p style="
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 28px;
-        color:  rgb(55, 65, 81);
-        position: absolute;
-        top: 200px;
-        left: 60px;
-        width: 600px;">Discover the fascinating science of encryption from ancient techniques to modern algorithms. Our interactive platform lets you experience firsthand how messages are secured through various cryptographic methods.</p>
-
-    </div>
-
-    <p style="
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 36px;
-    color: rgb(17, 24, 39);
-    position: relative;
-    justify-self: center;
-    top:10px;">Choose Your Encryption Method</p>
-    <p style="
-    justify-self: center;
-    text-align: center;
-    width: 720px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: rgb(75, 85, 99);">Select from historical cipher techniques that shaped the evolution of secure communication or explore modern RSA encryption that powers today's digital security.</p>
-    
-    <div style="
-    margin-top: 40px;
-    width: 100%;
-    display:flex;
-    justify-content: center;
-    justify-self: center;
-    gap: 40px">
-
-        <div id="Classical_Cryptography">
-            <div style="
-            position: relative;
-            top: 35px;
-            left: 35px;
-            width: 4rem;
-            height: 4rem;
-            background-color: #c7c6f0;
-            border-radius: 9999px;"><i class="ri-quill-pen-line" style="
-            color: #4F46E5;
-            font-size: 30px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate3d(-50%, -50%, 0);"></i></div>
-
-
-            <p style="
-            padding: 20px 30px 10px;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 32px;
-            color: rgb(17, 24, 39);">Classical Cryptography</p>
-            <p style="
-            padding: 0px 30px 0px;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            color: rgb(75, 85, 99);
-            translate: 0 -20px;">Explore historical encryption methods used throughout centuries, from Caesar's cipher to the Enigma machine.</p>
-            <div style="padding: 0px 30px 10px;">
-                <p><i class="ri-check-line" style="color:#4F46E5;"></i>  Caesar Cipher</p>
-                <p><i class="ri-check-line" style="color:#4F46E5;"></i>  Caesar Cipher</p>
-                <p><i class="ri-check-line" style="color:#4F46E5;"></i>  Caesar Cipher</p>
-            </div>
-            
-        </div>
-        <div id="RSA_Cryptography">
-            <div style="
-            position: relative;
-            top: 35px;
-            left: 35px;
-            width: 4rem;
-            height: 4rem;
-            background-color: #dcfce7;
-            border-radius: 9999px;"><i class="ri-lock-line" style="
-            color: green;
-            font-size: 30px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate3d(-50%, -50%, 0);"></i></div>
-
-
-            <p style="
-            padding: 20px 30px 10px;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 32px;
-            color: rgb(17, 24, 39);">RSA Cryptography</p>
-            <p style="
-            padding: 0px 30px 10px;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            color: rgb(75, 85, 99);
-            translate: 0 -20px;">Experience modern asymmetric encryption that secures the internet, using public and private key pairs.</p>
-            <div style="padding: 0px 30px 10px;">
-                <p><i class="ri-check-line" style="color:green;"></i>  Public Key Encryption</p>
-                <p><i class="ri-check-line" style="color:green;"></i>  Public Key Encryption</p>
-                <p><i class="ri-check-line" style="color:green;"></i>  Public Key Encryption</p>
-            </div>
-        </div>
-    </div>
-
-    <div style="
-    position: relative;
-    justify-items: center;">
-        <P style="
-        font-size: 30px;
-        font-weight: 700;
-        line-height: 36px;
-        color: rgb(17, 24, 39);">Classical Encryption Tool</P>
-        <p style="
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        color: rgb(75, 85, 99);">Enter your message and select a classical cipher method to see the encryption process in action.</p>
-    </div>
-
-    <div id="select_Encryption_method">
-        <p style="
-        position: relative;
-        justify-self: center;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 28px;
-        color: rgb(17, 24, 39);
-        top: 10px;">Select Encryption Method</p>
-        <p style="
-        position: relative;
-        justify-self: center;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        color: rgb(55, 65, 81);">Classical Cipher Type:</p>
-        <select style="
-        padding-left: 10px;
-        position: relative;
-        left: 50%;
-        transform: translate(-50%);
-        width: 80%;
-        height: 30px;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 24px;
-        color: rgb(55, 65, 81);
-        border-radius: 10px;
-        height: 40px;
-        background-color: rgb(249, 249, 249);
-        outline-color: #4F46E5;">
-            <option value="text">Caesar Cipher</option>
-            <option value="text">Caesar Cipher</option>
-            <option value="text">Caesar Cipher</option>
-        </select>
+    <!-- Classical Cryptography Section -->
+    <section id="classical">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Classical Cryptography</h2>
+      </div>
+      <div class="classical-grid">
+        <div class="classical-description" data-aos="fade-right">
+          <h2><i class="ri-shield-user-line"></i> Caesar Cipher</h2>
+          <p>
+            The Caesar Cipher is one of the simplest and oldest methods of encrypting messages, named after Julius Caesar, who reportedly used it to protect his military communications. It works by shifting each letter in the plaintext by a fixed number of positions down or up the alphabet.
+          </p>
+          <p>
+            <strong>How It Works:</strong><br>
+            1. <strong>Letter to Number Conversion:</strong> Each letter is first converted to a number (A=0, B=1, ..., Z=25).<br>
+            2. <strong>Encryption:</strong> The encryption function is <code>f(p) = (p + key) mod 26</code>, where:
+            <ul>
+              <li><code>p</code> is the numerical value of the plaintext letter,</li>
+              <li><code>key</code> is the number of positions to shift (e.g., 3),</li>
+              <li><code>mod 26</code> ensures the result wraps around the alphabet.</li>
+            </ul>
+            For example, if you shift 'A' (0) by 3, you get 'D' (3). So, "HELLO" becomes "KHOOR" when the key is 3.
+          </p>
+          <p>
+            3. <strong>Decryption:</strong> To reverse the encryption, use the function <code>f(c) = (c - key + 26) mod 26</code>, where:
+            <ul>
+              <li><code>c</code> is the numerical value of the ciphertext letter,</li>
+              <li>Adding 26 ensures the result stays positive before applying <code>mod 26</code>.</li>
+            </ul>
+            For example, if you decrypt 'D' (3) with a key of 3, you get 'A' (0).
+          </p>
+          <p>
+            Caesar Cipher is useful for basic demonstrations of encryption but is not secure by modern standards due to its predictable nature and small key space.
+          </p>
         </div>
 
-    <div style="
-    display:flex;
-    justify-content: center;
-    justify-self: center;
-    gap: 40px;
-    position: relative;
-    width: 100%;">
-        <div id="input">
-            <p style="
-            position: relative;
-            left: 5%">Input</p>
-            <p style="
-            position: relative;
-            left: 5%">Message:</p>
-
-            <textarea id="input_box"></textarea>
-
-            <p style="
-            position: relative;
-            left: 5%;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            color: rgb(55, 65, 81);">Cipher key:</p>
-            <input id="chiper_key" type="number" value="3" style="
-            padding-left: 10%;
-            color: rgb(55, 65, 81);
-            border-radius: 10px;
-            border: 1px solid;
-            height: 30px;
-            background-color: rgb(249, 249, 249);
-            position: relative;
-            left: 50%;
-            transform: translate(-50%);">
-            <p style="
-            position: relative;
-            left: 5%;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 24px;
-            color: rgb(55, 65, 81);">For Caesar cipher, enter a number (shift value)</p>
-            <div style="
-            display:flex;
-            gap:20px;
-            position: absolute;
-            bottom: 30px;
-            width: 100%;
-            justify-content: center;">
-                <button id="Encrypt">Encrypt</button>
-                <button id="decrypt">Decrypt</button>
+        <div class="classical-form" data-aos="fade-left">
+          <h3>Caesar Cipher Tool</h3>
+          <form>
+            <div class="form-group">
+              <label for="caesarText">Message</label>
+              <input type="text" id="caesarText" placeholder="Enter your message..." />
             </div>
 
-        </div>
-        <div id="output">
-            <p style="
-            position: relative;
-            left: 5%">Output</p>
-            <p style="
-            position: relative;
-            left: 5%">Result:</p>
+            <div class="form-group">
+              <label for="caesarKey">Cipher Key</label>
+              <input type="number" id="caesarKey" placeholder="e.g. 3" min="1" max="25" />
+            </div>
 
-            <textarea readonly id="output_box"></textarea>
-            <p style="
-            position: relative;
-            left: 5%;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 24px;
-            color: rgb(75, 85, 99);">This encryption method is considered secure for non-sensitive information.</p>
-            <button id="download_btn">
-                  <i class="ri-download-line mr-2"></i>  Download Result
-            </button>
+            <div class="button-row">
+              <button type="button" class="btn btn1 encrypt">
+                <i class="ri-lock-2-line"></i> Encrypt
+              </button>
+              <button type="button" class="btn btn2 decrypt">
+                <i class="ri-lock-unlock-line"></i> Decrypt
+              </button>
+            </div>
 
+            <div class="result-box">
+              <label>Result</label>
+              <div id="caesarResult" class="output-box">Your result will appear here.</div>
+            </div>
+          </form>
         </div>
-       
-    </div>
-    <script src="index.js"></script>
+      </div>
+    </section>
+    <!-- RSA Section -->
+    <section id="rsa">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Modern Cryptography</h2>
+      </div>
+      <div class="rsa-grid">
+        <div class="rsa-description" data-aos="fade-right">
+          <h2><i class="ri-key-line"></i> RSA Encryption</h2>
+          <p>
+            RSA (Rivest–Shamir–Adleman) is a powerful and widely-used public-key cryptosystem for secure communication. Unlike basic ciphers like Caesar Cipher, RSA uses two keys: a <strong>public key</strong> to encrypt and a <strong>private key</strong> to decrypt. This is called <em>asymmetric encryption</em>.
+          </p>
+          <p>
+            <strong>How it works:</strong>
+            <ul>
+              <li><strong>Key Generation:</strong> Choose two prime numbers, multiply them to get <code>n</code>. Then calculate <code>e</code> (public exponent) and <code>d</code> (private exponent).</li>
+              <li><strong>Encryption:</strong> Convert the message to a number <code>m</code>. Then compute <code>c = (m<sup>e</sup>) mod n</code>.</li>
+              <li><strong>Decryption:</strong> Compute <code>m = (c<sup>d</sup>) mod n</code> using the private key.</li>
+            </ul>
+          </p>
+          <p>
+            <strong>🔎 Example (Simplified for Understanding):</strong><br>
+            Let's say:
+            <ul>
+              <li>Choose primes: <code>p = 3</code>, <code>q = 11</code></li>
+              <li><code>n = 3 × 11 = 33</code></li>
+              <li>ϕ(n) = (3 − 1)(11 − 1) = 2 × 10 = 20</li>
+              <li>Choose <code>e = 3</code> (public exponent)</li>
+              <li>Calculate <code>d = 7</code> because (3 × 7) mod 20 = 1</li>
+            </ul>
+          </p>
+          <p>
+            Now encrypt a message "A" (ASCII 65):
+            <ul>
+              <li><strong>Encryption:</strong> <code>c = (65<sup>3</sup>) mod 33 = 274625 mod 33 = 17</code></li>
+              <li><strong>Decryption:</strong> <code>m = (17<sup>7</sup>) mod 33 = 65</code> → "A"</li>
+            </ul>
+          </p>
+          <p>
+            RSA is secure because it's extremely difficult to factor large numbers like <code>n</code> when using real-world key sizes (e.g., 2048-bit).
+            Try generating your own keys and encrypting/decrypting a message below!
+          </p>
+
+          <div class="video-container" data-aos="zoom-in">
+            <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/wXB-V_Keiu8" 
+                    title="RSA Encryption Explained by Computerphile" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <div class="rsa-form" data-aos="fade-left">
+          <h3>RSA Encryption Tool</h3>
+          <form>
+            <div class="form-group">
+              <label for="rsaP">Prime Number p</label>
+              <input type="number" id="rsaP" placeholder="Enter prime number p" min="2" />
+            </div>
+
+            <div class="form-group">
+              <label for="rsaQ">Prime Number q</label>
+              <input type="number" id="rsaQ" placeholder="Enter prime number q" min="2" />
+            </div>
+
+            <div class="form-group">
+              <label for="rsaText">Message</label>
+              <input type="text" id="rsaText" placeholder="Enter your message..." />
+            </div>
+
+            <div class="button-row">
+              <button type="button" class="btn btnG generate">
+                <i class="ri-key-2-line"></i> Generate Keys
+              </button>
+              <button type="button" class="btn btnE encrypt">
+                <i class="ri-lock-2-line"></i> Encrypt
+              </button>
+              <button type="button" class="btn btnD decrypt">
+                <i class="ri-lock-unlock-line"></i> Decrypt
+              </button>
+            </div>
+            <div class="results">
+              <label>Public Key</label>
+              <div id="rsaPublicKey" class="output-box">n: -<br>e: -</div>
+
+              <label>Private Key</label>
+              <div id="rsaPrivateKey" class="output-box">d: -</div>
+
+              <label>Encrypted Message</label>
+              <div id="rsaEncrypted" class="output-box">Encrypted output will appear here.</div>
+
+              <label>Decrypted Message</label>
+              <div id="rsaDecrypted" class="output-box">Decrypted output will appear here.</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+<!-- footer section -->
+<footer class="footer-simple" id="footer">
+  <div class="footer-content">
+    <p>Check my repository for codes: 
+      <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+    </p>
+    <p>&copy; 2025 CryptoExplorer. Built with 💡 and 🔐</p>
+  </div>
+</div>
+</footer>
+  <script src="index.js">
+  </script>
+  <script>
+  AOS.init({
+    duration: 800,
+    offset: 100,
+    easing: 'ease-in-out'
+  });
+</script>
 </body>
 </html>
